@@ -1,0 +1,17 @@
+@import "utils/mixins";
+@import "utils/keyframes";
+@import "base/_base";
+
+@import "layout/header"; 
+@import "layout/about";
+@import "layout/search";
+@import "components/best";
+@import "layout/photos";
+@import "layout/info";
+@import "components/popup";
+@import "layout/history";
+
+@import "components/card";
+@import "layout/types";
+@import "layout/places";
+@import "layout/events";

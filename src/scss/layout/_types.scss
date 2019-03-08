@@ -1,0 +1,19 @@
+.types{
+        grid-column: 3/9;
+ 
+        margin: 10vh 0vh;
+        display: none;
+
+        @media (max-width: $bp-L) {
+            grid-column: 1/11;
+            margin: 5vh 5vw;
+        }
+    &__info{
+        margin-bottom: 5vh;
+
+        @media (max-width: $bp-M){
+            text-align: center;
+        }
+       
+    }
+}
