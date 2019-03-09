@@ -181,9 +181,9 @@ document.querySelector('.container').addEventListener('click', (e) => {
 
 document.querySelector('.container').addEventListener('click', (e) => {
   const photoID = e.target.closest('.photos__img');
-    state.slider.counter= photoID.dataset.counter;
 
-  if (photoID) {
+  if (photoID !=null ) {
+    state.slider.counter= photoID.dataset.counter;
     sliderView.showSlider(state.slider.counter);
     document.querySelector('.popup').style.display = 'flex';
   }
@@ -257,26 +257,30 @@ document.querySelector('.container').addEventListener('click', e =>{
   
 
   let type = e.target.closest('.card__element');
-
-  switch(type.dataset.type){
-    case "party":
-    searchView.rmvStatus();
-    state.status ="night_club"
-    type.classList.add('active--party')
-    ctrlPlaces();
-    break;
-    case "shopping":
-    searchView.rmvStatus();
-    state.status ="shopping_mall"
-    type.classList.add('active--shopping')
-    ctrlPlaces();
-    break;
-    case "culture":
-    searchView.rmvStatus();
-    state.status ="museum"
-    type.classList.add('active--culture')
-    ctrlPlaces();
-    break;
+ 
+  if(type != null){
+    
+    switch(type.dataset.type){
+      case "party":
+      searchView.rmvStatus();
+      state.status ="night_club"
+      type.classList.add('active--party')
+      ctrlPlaces();
+      break;
+      case "shopping":
+      searchView.rmvStatus();
+      state.status ="shopping_mall"
+      type.classList.add('active--shopping')
+      ctrlPlaces();
+      break;
+      case "culture":
+      searchView.rmvStatus();
+      state.status ="museum"
+      type.classList.add('active--culture')
+      ctrlPlaces();
+      break;
+  
+    }
 
   }
 })
