@@ -1,0 +1,15 @@
+{
+    "name": "WorldWide",
+    "short_name": "WW",
+    "icons": [
+    ],
+    "start_url": "/index.html",
+    "scope": ".",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#fff",
+    "theme_color": "#3f51b5",
+    "description": "",
+    "dir": "ltr",
+    "lang": "en-US"
+  }
