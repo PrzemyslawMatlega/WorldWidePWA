@@ -126,7 +126,7 @@
             cursor: pointer;
             height: 100%;
 
-            @media (max-width: $bp-M) {
+            @media (max-width: $bp-XL) {
                 box-shadow: 0rem 0.5rem 2rem rgba(#000, .2);
 
             }
@@ -135,7 +135,7 @@
                 transform: scale(1.1);
                 box-shadow: 0rem 1rem 3rem rgba(#000, .2);
 
-                @media (max-width: $bp-M) {
+                @media (max-width: $bp-XL) {
                     transform: none;
                     box-shadow: none;
 

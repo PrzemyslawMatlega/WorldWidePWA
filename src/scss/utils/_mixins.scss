@@ -42,7 +42,7 @@
     transition: all 0.2s ease-in;
     background-position: $pos center;
 
-    @media (max-width: $bp-M) {
+    @media (max-width: $bp-XL) {
         background-image: url($url);
         background-size: cover;
         color: white;
