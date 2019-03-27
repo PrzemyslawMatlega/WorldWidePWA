@@ -1,26 +1,36 @@
-importScripts("precache-manifest.124acd507d6df20ed2f9b54da1eeaa9b.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("precache-manifest.70d20fa5cd5543bd7aa994588b0538ed.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 
-workbox.routing.registerRoute(/.*(?:fonts)\.gstatic.*$/, workbox.strategies.staleWhileRevalidate({
- cacheName: 'google-fonts'
-}));
-workbox.routing.registerRoute(/.*(?:predicthq)\.com.*$/, workbox.strategies.staleWhileRevalidate({
- cacheName: 'predictHQ',
- plugins: [
-   new workbox.expiration.Plugin({
-     maxEntries: 3,
-     maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
-   }),
- ]
-} 
-));
+workbox.routing.registerRoute(
+  /^https:\/\/fonts\.googleapis\.com/,
+  new workbox.strategies.NetworkFirst({
+    cacheName: 'google-fonts-stylesheets',
+  })
+);
 
+workbox.routing.registerRoute(
+  /^https:\/\/fonts\.gstatic\.com/,
+  new workbox.strategies.CacheFirst({
+    cacheName: 'google-fonts-webfonts',
 
-workbox.routing.registerRoute( /jpg|svg|jpeg/, workbox.strategies.cacheFirst(
- {cacheName: 'photos'
- }));
+  })
+);
 
-
-workbox.precaching.precacheAndRoute(self.__precacheManifest);
-
+ workbox.routing.registerRoute(/.*(?:predicthq)\.com.*$/, new workbox.strategies.NetworkFirst({
+  cacheName: 'predictHQ',
+  plugins: [
+    new workbox.expiration.Plugin({
+      maxEntries: 3
+    }),
+  ]
+ } 
+ ));
+ 
+ 
+ workbox.routing.registerRoute( /jpg|svg|jpeg/, workbox.strategies.cacheFirst(
+  {cacheName: 'photos'
+  }));
+ 
+ 
+ workbox.precaching.precacheAndRoute(self.__precacheManifest);
 
