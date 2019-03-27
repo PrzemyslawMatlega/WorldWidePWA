@@ -3,17 +3,17 @@
     "short_name": "WW",
     "icons": [
       {
-        "src": "/img/icon1.png",
+        "src": "img/icon1.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/img/icon2.png",
+        "src": "img/icon2.png",
         "type": "image/png",
         "sizes": "512x512"
       }
     ],
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "scope": ".",
     "display": "standalone",
     "orientation": "portrait-primary",
