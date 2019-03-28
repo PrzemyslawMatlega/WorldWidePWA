@@ -90,7 +90,7 @@ export const initializeHistory = () =>{
   const markup = `
   <section class="history">
    <h2 class="titleBig history__offline" > It seems that you are currently offline :( 
-     </br> You can explore only events that you searched in the past. </h2>         
+     </br> You can only see the results you have been looking for in the past. </h2>         
   <div class="history__main">
 
   </div>

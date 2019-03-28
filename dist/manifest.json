@@ -2,14 +2,25 @@
     "name": "WorldWide",
     "short_name": "WW",
     "icons": [
+      {
+        "src": "img/icon1.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "img/icon2.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
     ],
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "scope": ".",
     "display": "standalone",
     "orientation": "portrait-primary",
-    "background_color": "#fff",
-    "theme_color": "#3f51b5",
+    "background_color": "#3e89d5",
+    "theme_color": "#3e89d5",
     "description": "",
     "dir": "ltr",
     "lang": "en-US"
   }
+  
